@@ -74,14 +74,13 @@ function playGame () {
 }
 
 // playRound(getHumanChoice(), getComputerChoice());
-for (let i = 1; i <= 5; i++) {
-    playRound(getHumanChoice(),getComputerChoice());
-}
+// for (let i = 1; i <= 5; i++) {
+//     playRound(getHumanChoice(),getComputerChoice());
+// }
 
 if (humanScore > computerScore) {
         console.log("you wins")
     }
-
 else if (computerScore > humanScore){
         console.log("computer wins")
     }
@@ -91,3 +90,15 @@ else if (computerScore > humanScore){
     }
 }
 playGame();
+let rok = document.querySelector("#rok");
+rok.addEventListener("click", () =>{
+ playRound("rock", getComputerChoice());
+});
+let pep = document.querySelector("#pep");
+pep.addEventListener("click", () =>{
+ playRound("paper", getComputerChoice());
+});
+let sijer = document.querySelector("#sijer");
+sijer.addEventListener("click", () =>{
+ playRound("scissors", getComputerChoice());
+});
